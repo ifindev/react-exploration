@@ -17,5 +17,11 @@
   ],
   "author": "Muhammad Arifin",
   "license": "ISC",
-  "packageManager": "pnpm@9.1.2"
+  "packageManager": "pnpm@9.1.2",
+  "dependencies": {
+    "nanoid": "^5.0.9"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.8"
+  }
 }
