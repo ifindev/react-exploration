@@ -1,50 +1,38 @@
-# React + TypeScript + Vite
+# Exploring React v19 Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## What is it?
 
-Currently, two official plugins are available:
+React team has just released a stable version of React v19. So in this project, I want to explore more about several new features that are introduced in the v19 release. Some features that I am more interested with are:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Optimistic update with `useOptimistic`
+- Handling form submission with `useActionState`
+- The new `use` hook
 
-## Expanding the ESLint configuration
+Alright, let's do it
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Project Plan
 
-- Configure the top-level `parserOptions` property like this:
+### Context
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+To understand more, I want to build a simple contact management project. Here's breakdown of the core features:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Add new contact
+- Delete contact
+- Show list of contacts
+- Show contact detail
+- Optimistically update contact detail & reverse when there is an error
+- Mark contact as favorite
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Setup
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+To simplify project setup, I will just use these things:
+
+- mock API to handle everything
+- store data in `localstorage`
+
+### Design
+
+Just some basic wireframe here. Basically we got contact list on sidebar, and detail on the right side.
+<br >
+<br >
+<img src="./assets/design.png" width="600" height="500">
