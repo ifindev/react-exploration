@@ -1,0 +1,21 @@
+{
+  "name": "react-monorepo",
+  "version": "1.0.0",
+  "description": "Monorepo for React applications",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --parallel --stream run dev",
+    "build": "pnpm --parallel run build",
+    "lint": "pnpm --parallel run lint",
+    "dev:optimistic": "pnpm --filter @monorepo/react-optimistic dev"
+  },
+  "keywords": [
+    "monorepo",
+    "react",
+    "vite",
+    "typescript"
+  ],
+  "author": "Muhammad Arifin",
+  "license": "ISC",
+  "packageManager": "pnpm@9.1.2"
+}
